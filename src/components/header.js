@@ -1,42 +1,38 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import  HeaderTop from './headerTop';
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="wrap-header-responsive">
+        <div className="header-responsive">
+          <div className="kd-container">
+            <div className="kd-row">
+              <div className="menu-mobile">
+                {" "}
+                {/* Create Component MenuMobile */}
+                <span className="item item-1"></span>
+                <span className="item item-2"></span>
+                <span className="item item-3"></span>
+              </div>
+              <div className="header-share">
+                {" "}
+                {/* Create Component HeaderShare */}
+                <i className="fa fa-share-alt"></i>
+              </div>
+              <div className="header-search">
+                {" "}
+                {/* Create Component Header Search */}
+                <i className="fa fa-search"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <HeaderTop />
+    </header>
+  )
 }
 
 export default Header

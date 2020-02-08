@@ -7,10 +7,30 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
+import Header from './header';
+
+import './layout.css';
+
+const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleSideMenu = () => setMenuOpen(!menuOpen);
+  
+  return (
+    <div id="wrapper">
+      <div className="kd-container">
+        <div className="kd-row">
+          <Header />
+         {/* SLIDER */}
+          { children }
+        </div>
+      </div>
+    </div>
+    // Footer
+  );
+};
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export default Layout
