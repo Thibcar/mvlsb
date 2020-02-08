@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Ma Vie Sur Le Bassin`,
+    description: `Un blog à propos de ma vie sur le Bassin d'Arcachon`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -25,6 +25,44 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        excludedRoutes: [
+          '/wp/v2/users/**',
+          '/wp/v2/settings*',
+          '/wp/v2/themes*',
+        ],
+        baseUrl: 'ma-vie-sur-le-bassin.dans-mon-quartier.com/',
+        protocol: 'http',
+        hostingWPCOM: false,
+        useACF: true,
+        searchAndReplaceContentUrls: {
+          sourceUrl: 'http://ma-vie-sur-le-bassin.dans-mon-quartier.com/',
+          replacementUrl: '',
+        },
+      },
+    },
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Crimson+Text',
+            variants: ['200', '400', '500', '600', '700'],
+          },
+          {
+            family: 'Montserrat',
+            variants: ['200', '400', '500', '600', '700'],
+          },
+          {
+            family: 'Quattrocento',
+            variants: ['200', '400', '500', '600', '700'],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
