@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 import '../utils/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -65,7 +65,7 @@ const HeaderTop = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </div>    
   )
 }
 

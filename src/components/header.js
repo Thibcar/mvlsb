@@ -1,9 +1,12 @@
-import React from "react"
+import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  HeaderTop from './headerTop';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HeaderTop from "./header-top";
+import HeaderPopupSearch from "./header-popup-search";
+import HeaderPopupSocial from "./header-popup-social";
 
-import '../utils/fontawesome';
+import "../utils/fontawesome";
+import MainNavigation from "./main-navigation";
 
 const Header = () => {
   return (
@@ -21,19 +24,29 @@ const Header = () => {
               </div>
               <div className="header-share">
                 {" "}
-                <FontAwesomeIcon icon={'share-alt'} />
+                <FontAwesomeIcon icon={"share-alt"} />
               </div>
               <div className="header-search">
                 {" "}
-                <FontAwesomeIcon icon={'search'} />
+                <FontAwesomeIcon icon={"search"} />
               </div>
             </div>
           </div>
         </div>
       </div>
       <HeaderTop />
+      <HeaderPopupSearch />
+      <HeaderPopupSocial />
+      <div className="logo">
+        <div className="kd-container">
+          <div className="kd-row">
+            <h1>Ma Vie Sur Le Bassin</h1>
+          </div>
+        </div>
+      </div>
+      <MainNavigation />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
