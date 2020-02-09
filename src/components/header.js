@@ -1,6 +1,9 @@
 import React from "react"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  HeaderTop from './headerTop';
+
+import '../utils/fontawesome';
 
 const Header = () => {
   return (
@@ -18,13 +21,11 @@ const Header = () => {
               </div>
               <div className="header-share">
                 {" "}
-                {/* Create Component HeaderShare */}
-                <i className="fa fa-share-alt"></i>
+                <FontAwesomeIcon icon={'share-alt'} />
               </div>
               <div className="header-search">
                 {" "}
-                {/* Create Component Header Search */}
-                <i className="fa fa-search"></i>
+                <FontAwesomeIcon icon={'search'} />
               </div>
             </div>
           </div>

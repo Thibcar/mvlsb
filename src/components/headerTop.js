@@ -1,5 +1,8 @@
 import React from "react"
 
+import '../utils/fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const HeaderTop = () => {
   return (
     <div className="header-fixed clearfix">
@@ -26,37 +29,37 @@ const HeaderTop = () => {
         <ul>
           <li className="social-item">
             <a href="https://www.behance.net/">
-              <i className="fa fa-behance"></i>
+            <FontAwesomeIcon icon={['fab','behance']} />
               <span>Behance</span>
             </a>
           </li>
           <li className="social-item">
             <a href="http://dribbble.com/">
-              <i className="fa fa-dribbble"></i>
+             <FontAwesomeIcon icon={['fab','dribbble']} />
               <span>Dribbble</span>
             </a>
           </li>
           <li className="social-item">
             <a href="https://www.facebook.com/">
-              <i className="fa fa-facebook"></i>
+            <FontAwesomeIcon icon={['fab','facebook']} />
               <span>Facebook</span>
             </a>
           </li>
           <li className="social-item">
             <a href="https://plus.google.com/">
-              <i className="fa fa-google-plus"></i>
+            <FontAwesomeIcon icon={['fab','google']} />
               <span>Google Plus</span>
             </a>
           </li>
           <li className="social-item">
             <a href="https://www.pinterest.com/">
-              <i className="fa fa-pinterest"></i>
+            <FontAwesomeIcon icon={['fab','pinterest']} />
               <span>Pinterest</span>
             </a>
           </li>
           <li className="social-item">
             <a href="http://twitter.com/">
-              <i className="fa fa-twitter"></i>
+            <FontAwesomeIcon icon={['fab','twitter']} />
               <span>Twitter</span>
             </a>
           </li>
