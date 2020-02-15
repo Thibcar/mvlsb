@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ma Vie Sur Le Bassin`,
+    title: `Ma Vie Sur le Bassin`,
     description: `Un blog à propos de ma vie sur le Bassin d'Arcachon`,
     author: `@gatsbyjs`,
   },
@@ -29,6 +29,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/menus",
+        ],
         excludedRoutes: [
           '/wp/v2/users/**',
           '/wp/v2/settings*',

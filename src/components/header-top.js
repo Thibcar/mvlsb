@@ -1,28 +1,23 @@
 import React from 'react';
 
+import { Link } from 'gatsby';
+
+import PropTypes from 'prop-types';
+
+
 import '../utils/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const HeaderTop = () => {
+const HeaderTop = ({ menu }) => {
   return (
     <div className="header-fixed clearfix">
       <nav className="menu-top">
         <ul className="menu menu-top-list">
-          <li className="menu-item">
-            <a href="index.html">Home</a>
-          </li>
-          <li className="menu-item">
-            <a href="#">Trips</a>
-          </li>
-          <li className="menu-item">
-            <a href="#">Travel</a>
-          </li>
-          <li className="menu-item">
-            <a href="about.html">About</a>
-          </li>
-          <li className="menu-item">
-            <a href="contact.html">Contact</a>
-          </li>
+          {menu.items.map((item, i) => (
+            <li key={i} className="menu-item">
+              <Link to={item.url}>{item.title}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <div className="header-socials">
@@ -67,6 +62,10 @@ const HeaderTop = () => {
       </div>
     </div>    
   )
+}
+
+HeaderTop.propTypes = {
+  menu: PropTypes.object,
 }
 
 export default HeaderTop
