@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../utils/fontawesome";
+import "../../utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderPopupSocial = () => {

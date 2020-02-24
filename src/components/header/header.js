@@ -7,16 +7,16 @@ import HeaderTop from "./header-top";
 import HeaderPopupSearch from "./header-popup-search";
 import HeaderPopupSocial from "./header-popup-social";
 
-import "../utils/fontawesome";
-import MainNavigation from "./main-navigation";
+import "../../utils/fontawesome";
+import MainNavigation from "../main-navigation";
 
 const Header = () => {
-  const { 
+  const {
     site,
     menu: {
       edges: [{ node: menu }]
     },
-   } = useStaticQuery(graphql`
+  } = useStaticQuery(graphql`
     query HeaderQuery {
       site {
         siteMetadata {

@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 
-import '../utils/fontawesome';
+import '../../utils/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const HeaderTop = ({ menu }) => {
