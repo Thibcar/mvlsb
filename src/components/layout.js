@@ -15,13 +15,12 @@ import './layout.css';
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleSideMenu = () => setMenuOpen(!menuOpen);
-  
+
   return (
     <div id="wrapper">
       <div className="kd-container">
         <div className="kd-row">
-          <Header />
-          { children }
+          {children}
         </div>
       </div>
     </div>

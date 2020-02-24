@@ -38,11 +38,6 @@ module.exports = {
           "**/taxonomies",
           "**/menus",
         ],
-        excludedRoutes: [
-          '/wp/v2/users/**',
-          '/wp/v2/settings*',
-          '/wp/v2/themes*',
-        ],
         baseUrl: 'ma-vie-sur-le-bassin.dans-mon-quartier.com/',
         protocol: 'http',
         hostingWPCOM: false,

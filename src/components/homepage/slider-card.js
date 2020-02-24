@@ -6,12 +6,12 @@ import ReadMore from '../read-more';
 
 const SliderCard = () => {
     return (
-        <div class="content-box">
-            <div class="post-cat">
+        <div className="content-box">
+            <div className="post-cat">
                 <Tags />
             </div>
             <ArchivePostTitle />
-            <div class="item-entry">
+            <div className="item-entry">
                 <p>
                     Contrary to popular belief, Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin
 </p>

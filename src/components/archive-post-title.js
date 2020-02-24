@@ -2,7 +2,7 @@ import React from 'react';
 
 const ArchivePostTitle = () => {
     return (
-        <h2 class="title">
+        <h2 className="title">
             <a href="single.html">The secret made women the beauty</a>
         </h2>
     )

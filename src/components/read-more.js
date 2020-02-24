@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReadMore = () => {
     return (
-        <div class="read-more">
+        <div className="read-more">
             <a href="#">Read more</a>
         </div>
     )
