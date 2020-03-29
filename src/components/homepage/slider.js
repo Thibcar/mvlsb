@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { graphQl, useStaticQuery } from 'gatsby';
 
@@ -14,6 +14,13 @@ const Slider = () => {
                     node {
                         title
                         featured_media {
+                            localFile {
+                                childImageSharp {
+                                    fluid(quality: 100, maxWidth: 2000) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
                             alt_text
                             path
                         }
@@ -28,9 +35,17 @@ const Slider = () => {
             }
         }
     `);
+
+    const [state, setState] = useState({
+        slides,
+        activeIndex: 0,
+        autoSlide: true,
+        interval: 10000,
+    });
+    console.log('slides =>', slides);
     return (
         <div id="featured-slider" className="featured-slider">
-            <Slide />
+            <Slide slide={slides.edges[state.activeIndex]} />
         </div>
     );
 };

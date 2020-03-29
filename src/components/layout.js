@@ -11,24 +11,25 @@ import PropTypes from 'prop-types';
 import Header from './header/header';
 
 import './layout.css';
+import Footer from './footer/footer';
 
 const Layout = ({ children }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const handleSideMenu = () => setMenuOpen(!menuOpen);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleSideMenu = () => setMenuOpen(!menuOpen);
 
-  return (
-    <div id="wrapper">
-      <div className="kd-container">
-        <div className="kd-row">
-          {children}
+    return (
+        <div>
+            <div id="wrapper">
+                <div className="kd-container">
+                    <div className="kd-row">{children}</div>
+                </div>
+            </div>
+            <Footer />
         </div>
-      </div>
-    </div>
-    // Footer
-  );
+    );
 };
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
-export default Layout
+export default Layout;
